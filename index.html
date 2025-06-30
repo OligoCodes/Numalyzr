@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>HTML</title>
+  
+  <!--Montserrat-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  
+  <!-- Fira Code -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+  <script type="text/javascript" src="darkMode.js" defer></script>
+</head>
+
+<body>
+  
+  <!--header-->
+  <header class="themes">
+    <button id="theme-switch"><i class="fa-solid fa-moon"></i><i class="fa-solid fa-sun"></i></button>
+  </header>
+  
+  <!--head-->
+  <div class="adjust">
+    <div id="main" class="headBox">
+      <h1 id="head"><i class="fa-solid fa-fingerprint"></i> Numalyzr</h1>
+      <p style="text-align: center;font-family: Montserrat;padding-bottom: 30px;">Know more than just digits. Reveal the truth behind any number.<br><br> Enter a number below</p>
+       
+      <div class="inputButton">
+        <input type="text" id="phoneNumber" placeholder="eg.+233 55 187 9083"/>
+        <button id="validate" onclick="traceNumber()">Validate</button>
+      </div>
+    </div>
+  </div>
+  
+  <!--body-->
+  <div class="father">
+    
+    
+    <div class="lineBox">
+      <h2 class="info">Validity <i class="fa-solid fa-user-check"></i></h2>
+      <p>"Is this a real, working number?"
+Quickly tells you if the number exists and can receive calls or texts.
+</p>
+      <div class="response">
+        <div class="punk">
+           <div></div>
+        </div>
+        <h4 class="app" id="validity"></h4>
+      </div>
+    </div>
+    
+    
+    <div class="lineBox">
+      <h2 class="info">Disposability <i class="fa-solid fa-trash-can-arrow-up"></i></h2>
+      <p>"Temporary or permanent?"
+Checks if it’s a one-time, throwaway number often used for signups.
+</p>
+      <div class="response">
+        <div class="punk">
+          <div></div>
+        </div>
+        <h4 class="app" id="disposable"></h4>
+      </div>
+    </div>
+    
+    
+    <div class="lineBox">
+      <h2 class="info">Type <i class="fa-solid fa-layer-group"></i></h2>
+      <p>"What kind of number is this?"
+Find out if it’s a mobile, landline, VoIP, or something else.</p>
+      <div class="response">
+        <div class="punk">
+          <div></div>
+        </div>
+         <h4 class="app" id="type"></h4> 
+      </div>
+    </div>
+    
+    
+    <div class="lineBox">
+      <h2 class="info">Location <i class="fa-solid fa-location-dot"></i></h2>
+      <p>"Where is this number from?"
+Shows the country, region, and international dialing code.</p>
+      <div class="response">
+        <div class="punk">
+          <div></div>
+        </div>
+        <h4 class="app" id="location"></h4>
+      </div>
+    </div>
+    
+    
+    <div id="part" class="lineBox">
+      <h2 class="info">Format <i class="fa-solid fa-folder-tree"></i></h2>
+      <p>"How is this number structured?"
+Compare local (national) and international versions side by side.</p>
+      <div class="response">
+         <div class="punk">
+           <div></div>
+         </div>
+         <h4 class="app" id="format"></h4>
+      </div>
+    </div>
+    
+    
+    <div class="lineBox">
+       <h2 class="info">Carrier <i class="fa-solid fa-satellite-dish"></i></h2>
+       <p>Tells the Mobile network operator or telecom provider.</p>
+       <div class="response">
+          <div class="punk">
+            <div></div>
+          </div>
+          <h4 class="app" id="carrier"></h4>
+       </div>
+    </div>
+    
+    
+  </div>
+  
+  <footer>
+    <ul>
+      <li><a href="https://www.tiktok.com/@oligocodes?_t=ZM-8xMlr77RevV&_r=1"><i class="fa-brands fa-tiktok"></i></a></li>
+      <li><a href="https://www.github.com/OligoCodes"><i class="fa-brands fa-github"></i></a></li>
+      <li><a href="https://wa.me/+233591179690"><i class="fa-brands fa-whatsapp"></i></a></li>
+      <li><a href="https://t.me/OligoCodes"><i class="fa-brands fa-telegram"></i></i></a></li>
+    </ul>
+  <p> Made with <i class="fa-solid fa-heart"></i> by Joseph Bonsu 🇬🇭 </p> </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
