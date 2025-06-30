@@ -1,0 +1,346 @@
+:root{
+    --base: #D5D5D5;
+    --base1: #5C69FF;
+    --base2: 0px 0px 6px rgba(0,0,0,0.2);
+    --base3: #2D2D2D;
+    --base4: #DEDEDE;
+    --base5: linear-gradient(#14FF49, #0DFFD2);
+    --base6: #FF1D17;
+    --base7: inset 1px 1px 3px rgba(0,0,0, 0.2);
+    --base8: #848484;
+    --base9: linear-gradient(#004FE0,#11DE3E);
+    --base10: #F7F7F7;
+    --base11: inset 1px 1px 3px rgba(0,0,0, 0.2);
+    --base12: #078624;
+    --base13: #0BD2A4;
+    --base14: var(--base3);
+    --base15: linear-gradient(#7BB4FF, #B873FF)
+}
+
+.darkMode{
+    --base: url(image/Dback.png);
+    --base1: #73AEFF;
+    --base2: 0px 0px 12px rgba(255,255,255, 0.7);
+    --base3: #D6D6D6;
+    --base4: #43576A;
+    --base5: linear-gradient(#00FF3A, #42FBD9);
+    --base6: #FF1D17 ;
+    --base7: 2px 0px 4px rgba(255, 255, 255, 1)
+    --base8: #5B0000;
+    --base9: linear-gradient(#64E6FF,#64FFC4);
+    --base10: linear-gradient(#DDE6FC, #D8F7FF);
+    --base12: #12E2FF;
+    --base13: #0B98FF;
+    --base14: #000080 ;
+}
+
+*{
+  scrollbar-color: var(--base1);
+  color: var(--base3);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background: var(--base);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    position: relative;
+    transition: background-image 0.6s ease;
+}
+
+body .darkMode{
+    transition: background-image 1.5s ease;
+}
+
+.father{
+  position: relative;
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-top: 30px;
+  
+}
+
+.lineBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    width: 350px;
+    height: 270px;
+    border-radius: 13px;
+    background: #FFFFFF;
+    box-shadow: var(--base2);
+    font-family: Montserrat;
+}
+
+#part{
+    height: 270px;
+}
+
+.darkMode .lineBox,.darkMode .headBox {
+    background: transparent;
+    backdrop-filter: blur(8px);
+    border: solid 1px var(--base1);
+}
+
+.headBox{
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    height: auto;
+    margin-top: 60px;
+    border-radius: 13px;
+    background: #FFFFFF;
+    box-shadow: var(--base2);
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+.inputButton{
+    display: flex;
+    padding-bottom: 45px;
+    transition: all 2s ease;
+}
+
+.themes{
+    display: flex;
+    
+}
+
+
+#theme-switch{
+    display: flex;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: none;
+    position: fixed;
+    background: var(--base15);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    filter: drop-shadow(0 0 1px rgba(0,0,0,0.2));
+    color: #191919;
+    font-size: 30px;
+    animation: subtleMotion 100000s ease infinite;
+}
+
+@keyframes subtleMotion{
+    0%{
+        transform: translateX(0px);
+    }
+    50%{
+        transform: translateX(340px);
+    }
+    100%{
+        transform: translateX(-10px);
+    }
+}
+
+#theme-switch :last-child{
+    display: none;
+}
+
+.darkMode #theme-switch :first-child{
+    display: none;
+}
+
+.darkMode #theme-switch :last-child {
+    display: block;
+    color: #191919;
+    transition: all 1.5s ease;
+    animation: rotateIn 2s ease 1;
+}
+
+@keyframes rotateIn{
+    0%{
+        transform: rotateZ(-188deg);
+    }
+    100%{
+        transform: rotateZ(0deg);
+    }
+}
+
+#main{
+    height: 300px;
+}
+
+.adjust{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*Internal styling*/
+
+#phoneNumber{
+    display: flex;
+    width: 200px;
+    height: 45px;
+    border-radius: 13px 0 0 13px;
+    border: none;
+    background: var(--base4);
+    box-shadow: var(--base7);
+}
+
+#phoneNumber:hover{
+    border: solid blue 1px;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: #43576A;
+  font-family: Montserrat;
+}
+
+input::placeholder{
+    font-family: Montserrat;
+    color: var(--base8);
+}
+
+
+#validate{
+    height: 47px;
+    width: 75px;
+    border: none;
+    border-radius: 0 13px 13px 0;
+    color: var(--base6) ;
+    font-family: Montserrat;
+    font-weight: 700;
+    background: var(--base5);
+}
+
+#validate:hover{
+    transition: all 0.4s ease;
+    box-shadow: var(--base11);
+    scale: 1.01;
+}
+
+p{
+    padding: 5px;
+    text-align: center;
+}
+
+h2{
+    text-align: center;
+}
+
+h1{
+    font-family: Montserrat;
+}
+
+h4{
+    text-align: center;
+    font-size: 16px;
+}
+
+.darkMode h4{
+    color: var(--base14);
+}
+#head{
+    background: var(--base9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.info {
+    background: var(--base9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Needed for WebKit browsers */
+}
+
+.response {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 330px;
+    height: auto;
+    border-radius: 13px;
+    border: none;
+    box-shadow: var(--base11);
+    background: var(--base10);
+    font-family: Fira Code;
+
+}
+
+.app{
+    color: var(--base14);
+}
+
+.spinner{
+    
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: solid 4px var(--base12);
+    border-top-color: var(--base13);
+    animation: Ludinus 1s linear infinite;
+}
+
+@keyframes Ludinus{
+   0%{
+       transform: rotate(360deg);
+   } 
+}
+
+
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content:  center;
+    align-items: center;
+    align-items: center;
+    font-family: Montserrat;
+}
+
+footer ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    list-style: none;
+    margin-right: 50px;
+}
+
+footer ul li{
+    margin: 0px 20px;
+}
+
+i.fa-brands{
+    font-size: 30px;
+}
+
+@media (min-width: 768px) {
+   .father{
+         flex-direction: row;
+         flex-wrap: wrap;
+   }
+   body{
+       background-size: cover;
+       background-position: center;
+       background-repeat: no-repeat;
+       height: 100vh;
+       position: relative;
+   }
+   .headBox{
+       width: 740px;
+   }
+   #phoneNumber{
+       width: 400px;
+   }
+   #validate{
+       width: 100px;
+   }
+   
+}
